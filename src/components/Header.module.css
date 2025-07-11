@@ -5,7 +5,6 @@
   height: 56px;
   margin-bottom: 120px;
   background-color: rgba(var(--mantine-color-body-rgb), 0,5) !important;
-  border-bottom: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
   backdrop-filter: blur(10px);
 }
 
@@ -14,6 +13,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.gradientText{
+  background: linear-gradient(to right, #2172f4, #9333ea); /* your blue-purple gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* for Firefox */
+  color: transparent;     /* fallback */
+  margin-left: 50px;
+}
+
+.links {
+  margin-left: auto;
 }
 
 .links a {
@@ -82,6 +94,11 @@
 
 
 /* Light Mode */
+
+.lightMode {
+  margin-left: 50px;
+  margin-right: 50px;
+}
 
 .icon {
   width: 22px;

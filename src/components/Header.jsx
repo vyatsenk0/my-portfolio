@@ -38,8 +38,10 @@ export default function Header() {
   return (
     <header className={classes.header}>
      {/* fluid > size */}
-      <Container size="lg" className={classes.inner}> 
-        <h3>Vladislav Yatsenko</h3>
+      <Container fluid className={classes.inner}> 
+        <a href="#" className={classes.gradientText}>
+          <h3>Vladislav Yatsenko</h3>
+        </a>
         <Group gap={5} visibleFrom="xs" className={classes.links}>
           {items}
         </Group>
@@ -48,6 +50,7 @@ export default function Header() {
         
         {/* Light Mode */}
         <ActionIcon
+          className={classes.lightMode}
           onClick={() => setColorScheme(computedColorScheme === 'light' ? 'dark' : 'light')}
           variant="default"
           size="xl"
