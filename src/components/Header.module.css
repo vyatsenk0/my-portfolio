@@ -3,6 +3,7 @@
   /* z-index: 1000; */
   width: 100%; 
   height: 56px;
+  top: 0; 
   margin-bottom: 120px;
   background-color: rgba(var(--mantine-color-body-rgb), 0,5) !important;
   backdrop-filter: blur(10px);
