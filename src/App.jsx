@@ -2,16 +2,23 @@ import './App.css'
 
 import Header from './components/Header'
 import Home from './components/Home'
+import Portfolio from './components/Portfolio'
+
+// Import styles of packages that you've installed.
+// All packages except `@mantine/hooks` require styles imports
+// @mantine/core package styles must always be imported before any other Mantine package styles:
+import '@mantine/core/styles.css';
+
+import { MantineProvider } from '@mantine/core';
 
 function App() {
-
-
-  return (
+  return <MantineProvider>{
     <>
       <Header />
       <Home />
+      <Portfolio />
     </>
-  )
+  }</MantineProvider>;
 }
 
 export default App
