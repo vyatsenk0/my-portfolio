@@ -52,14 +52,14 @@ export function TechStackGrid() {
       {techCategories.map((category) => (
         <Card key={category.title} withBorder radius="md" className={classes.card} mt="xl">
           <Group justify="center">
-            <Text className={classes.title}>{category.title}</Text>
+            <Text className={classes.title} fw={700} >{category.title}</Text>
           </Group>
 
           <SimpleGrid cols={{ base: 2, sm: 3, md: 4, lg: 6 }} mt="md" spacing="lg">
             {category.items.map((item) => (
               <UnstyledButton key={item.title} className={classes.item}>
                 <Image src={item.image} alt={item.title} height={40} fit="contain" />
-                <Text size="xs" mt={7} ta="center">
+                <Text size="x" mt={7} ta="center" fw={600}>
                   {item.title}
                 </Text>
               </UnstyledButton>
