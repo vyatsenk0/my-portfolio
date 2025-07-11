@@ -17,32 +17,30 @@ const links = [
 
 export default function Header() {
   const [opened, { toggle }] = useDisclosure(false);
-  const [active, setActive] = useState(links[0].link);
-
+  const [active, setActive] = useState("#");
+  
   const { setColorScheme } = useMantineColorScheme();
-  const computedColorScheme = useComputedColorScheme('light', { getInitialValueInEffect: true });
+  // -> computedColorScheme is 'light' | 'dark', argument is the default value
+  const computedColorScheme = useComputedColorScheme('dark', { getInitialValueInEffect: true });
 
   const items = links.map((link) => (
-    <a
-      key={link.label}
-      href={link.link}
-      className={classes.link}
-      data-active={active === link.link || undefined}
-      onClick={() => {
-        // event.preventDefault(); remove to allow native scroll
-        setActive(link.link);
-      }}
-    >
-      {link.label}
-    </a>
-  ));
+  <a
+    href={link.link}
+    key={link.label}
+    data-active={active === link.link}
+    onClick={() => setActive(link.link)}
+  >
+    {link.label}
+  </a>
+));
+
 
   return (
     <header className={classes.header}>
      {/* fluid > size */}
       <Container size="lg" className={classes.inner}> 
         <h3>Vladislav Yatsenko</h3>
-        <Group gap={5} visibleFrom="xs">
+        <Group gap={5} visibleFrom="xs" className={classes.links}>
           {items}
         </Group>
 

@@ -1,13 +1,12 @@
 .header {
   position: fixed;
-  /* opacity: 0.6; */
-  background-color: transparent;
   /* z-index: 1000; */
   width: 100%; 
   height: 56px;
   margin-bottom: 120px;
-  background-color: var(--mantine-color-body);
+  background-color: rgba(var(--mantine-color-body-rgb), 0,5) !important;
   border-bottom: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+  backdrop-filter: blur(10px);
 }
 
 .inner {
@@ -17,25 +16,69 @@
   align-items: center;
 }
 
-.link {
-  display: block;
-  line-height: 1;
+.links a {
+  position: relative;
+  display: inline-block;
   padding: 8px 12px;
-  border-radius: var(--mantine-radius-sm);
-  text-decoration: none;
-  color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-0));
   font-size: var(--mantine-font-size-sm);
   font-weight: 500;
-
-  @mixin hover {
-    background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
-  }
-
-  [data-mantine-color-scheme] &[data-active] {
-    background-color: var(--mantine-color-blue-filled);
-    color: var(--mantine-color-white);
-  }
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
+
+/* Dark theme: gray-4 */
+[data-mantine-color-scheme="dark"] .links a {
+  color: var(--mantine-color-gray-4);
+}
+
+/* Light theme: gray-7 */
+[data-mantine-color-scheme="light"] .links a {
+  color: var(--mantine-color-gray-7);
+}
+
+/* === Hover Styles === */
+
+/* Dark theme: white text */
+[data-mantine-color-scheme="dark"] .links a:hover {
+  color: var(--mantine-color-white);
+}
+
+/* Light theme: black text */
+[data-mantine-color-scheme="light"] .links a:hover {
+  color: var(--mantine-color-black);
+}
+
+
+
+.links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(to right, #2172f4, #9333ea); /* blue-purple gradient */
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.links a:hover::after {
+  transform: scaleX(1);
+}
+
+/* === Active clicked links === */
+.links a[data-active="true"] {
+  background: linear-gradient(to right, #2172f4, #9333ea); /* blue-purple gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.links a[data-active="true"]::after {
+  transform: scaleX(1);
+}
+
+
 
 
 /* Light Mode */
