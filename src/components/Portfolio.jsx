@@ -1,5 +1,6 @@
 import { Box, Container, Text, Title, Tabs, Card, Group, SimpleGrid } from '@mantine/core';
 import { TechStackGrid } from './TechStackGrid';
+import { Certificates } from './Certificates';
 
 export default function Portfolio() {
   return (
@@ -14,11 +15,11 @@ export default function Portfolio() {
 
         <Tabs color="violet" variant="outline" defaultValue="tech">
           <Tabs.List justify="center">
-            <Tabs.Tab value="tech">Tech Stack</Tabs.Tab>
-            <Tabs.Tab value="projects">Projects</Tabs.Tab>
-            <Tabs.Tab value="work">Work Experience</Tabs.Tab>
-            <Tabs.Tab value="education">Education</Tabs.Tab>
-            <Tabs.Tab value="certs">Certifications</Tabs.Tab>
+            <Tabs.Tab value="tech" fw={700}>Tech Stack</Tabs.Tab>
+            <Tabs.Tab value="projects" fw={700}>Projects</Tabs.Tab>
+            <Tabs.Tab value="work" fw={700}>Work Experience</Tabs.Tab>
+            <Tabs.Tab value="education" fw={700}>Education</Tabs.Tab>
+            <Tabs.Tab value="certs" fw={700} >Certificates</Tabs.Tab>
           </Tabs.List>
 
           <Tabs.Panel value="tech" pt="md">
@@ -34,7 +35,7 @@ export default function Portfolio() {
             Education content
           </Tabs.Panel>
           <Tabs.Panel value="certs" pt="md">
-            Certifications content
+            <Certificates />
           </Tabs.Panel>
         </Tabs>
       </Container>
