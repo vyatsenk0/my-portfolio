@@ -1,6 +1,6 @@
 import { Box, Container, Text, Title, Tabs, Card, Group, SimpleGrid } from '@mantine/core';
-import { TechStackGrid } from './TechStackGrid';
-import { Certificates } from './Certificates';
+import { TechStackGrid } from './partials/TechStackGrid';
+import { Certificates } from './partials/Certificates';
 
 export default function Portfolio() {
   return (

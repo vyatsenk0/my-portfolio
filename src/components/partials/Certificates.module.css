@@ -52,11 +52,4 @@
   box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
 }
 
-.closeIcon {
-  position: fixed;
-  top: 80px;
-  right: 380px;
-  color: white;
-  z-index: 10000;
-  background-color: #5c5b5b;
-}
+

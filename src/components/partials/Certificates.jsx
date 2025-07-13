@@ -15,7 +15,7 @@ export function Certificates() {
 
   return (
     <>
-    {/* Certificate Grid */}
+      {/* Certificate Grid */}
       <SimpleGrid cols={{ base: 1, sm: 2, md: 3 }} spacing="lg" mt="xl">
         {certificates.map((cert) => (
           <Box
@@ -35,21 +35,31 @@ export function Certificates() {
         ))}
       </SimpleGrid>
 
- {/* Fullscreen Overlay */}
+      {/* Fullscreen Overlay */}
       {activeCert && (
-        <div className={classes.fullscreenOverlay} onClick={handleClose}>
+        // Close on outer border click
+        <div className={classes.fullscreenOverlay} onClick={handleClose}> 
           <img
             src={activeCert.image}
             alt={activeCert.title}
             className={classes.fullscreenImage}
             onClick={(e) => e.stopPropagation()} // Don't close on image click
           />
+
+          {/* Close Icon */}
           <ActionIcon
             onClick={handleClose}
             variant="filled"
             size="xl"
             radius="xl"
-            className={classes.closeIcon}
+            color="#5c5b5b"
+            style={{
+              position: 'fixed',
+              top: 80,
+              right: 380,
+              color: 'white',
+              zIndex: 10000,
+            }}
           >
             <IconX size={25} />
           </ActionIcon>
