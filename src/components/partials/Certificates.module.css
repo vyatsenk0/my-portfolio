@@ -46,7 +46,7 @@
 }
 
 .viewText {
-  color: white;
+  color: white !important;
   font-weight: 600 !important;
   font-size: 1.3rem !important;
 }
