@@ -18,7 +18,9 @@
 }
 
 .certificateBox:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
+  box-shadow: 0 0 5px 1px #2172f4,
+              0 0 10px 2px #9333ea;
 }
 
 .certificateImage {
