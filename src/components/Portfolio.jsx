@@ -1,9 +1,17 @@
-import { Box, Container, Text, Title, Tabs, Card, Group, SimpleGrid } from '@mantine/core';
+import { useState } from 'react';
+import { Box, Container, Text, Title, Tabs, Card, Group, SimpleGrid, Center, SegmentedControl } from '@mantine/core';
+import { IconPackages, IconCode, IconBriefcase2, IconSchool, IconCertificate } from '@tabler/icons-react';
+
+import classes from './Portfolio.module.css';
+
 import { TechStackGrid } from './partials/TechStackGrid';
 import { Education } from './partials/Education';
 import { Certificates } from './partials/Certificates';
 
+
 export default function Portfolio() {
+  const [value, setValue] = useState('techStack');
+
   return (
     <Box id="portfolio" style={{ padding: '80px 0' }}>
       <Container size="md" ta="center">
@@ -14,31 +22,70 @@ export default function Portfolio() {
           A quick glance at my technical background and professional journey.
         </Text>
 
-        <Tabs color="violet" variant="outline" defaultValue="tech">
-          <Tabs.List justify="center">
-            <Tabs.Tab value="tech" fw={700}>Tech Stack</Tabs.Tab>
-            <Tabs.Tab value="projects" fw={700}>Projects</Tabs.Tab>
-            <Tabs.Tab value="work" fw={700}>Work Experience</Tabs.Tab>
-            <Tabs.Tab value="education" fw={700}>Education</Tabs.Tab>
-            <Tabs.Tab value="certs" fw={700} >Certificates</Tabs.Tab>
-          </Tabs.List>
-
-          <Tabs.Panel value="tech" pt="md">
-            <TechStackGrid />
-          </Tabs.Panel>
-          <Tabs.Panel value="projects" pt="md">
-            Projects content
-          </Tabs.Panel>
-          <Tabs.Panel value="work" pt="md">
-            Work experience content
-          </Tabs.Panel>
-          <Tabs.Panel value="education" pt="md">
-            <Education />
-          </Tabs.Panel>
-          <Tabs.Panel value="certs" pt="md">
-            <Certificates />
-          </Tabs.Panel>
-        </Tabs>
+         <SegmentedControl
+          radius="xl"
+          size="xl"
+          value={value}
+          onChange={setValue}
+          classNames={classes}
+          transitionDuration={200}  // smooth transition
+          transitionTimingFunction="linear" // smooth transition
+          // withItemsBorders={false} // without | separatators
+          // fullWidth 
+          data={[
+        {
+          value: 'techStack',
+          label: (
+            <Center style={{ gap: 10 }}>
+              <IconPackages size={20} />
+              <span>Tech Stack</span>
+            </Center>
+          ),
+        },
+        {
+          value: 'projects',
+          label: (
+            <Center style={{ gap: 10 }}>
+              <IconCode size={20} />
+              <span>Projects</span>
+            </Center>
+          ),
+        },
+        {
+          value: 'workExp',
+          label: (
+            <Center style={{ gap: 10 }}>
+              <IconBriefcase2 size={20} />
+              <span>Work Experience</span>
+            </Center>
+          ),
+        },
+           {
+          value: 'education',
+          label: (
+            <Center style={{ gap: 10 }}>
+              <IconSchool size={20} />
+              <span>Education</span>
+            </Center>
+          ),
+        },
+           {
+          value: 'certificates',
+          label: (
+            <Center style={{ gap: 10 }}>
+              <IconCertificate size={20} />
+              <span>Certificates</span>
+            </Center>
+          ),
+        },
+      ]}
+        />
+        {/* Conditionally render partials */}
+        {value === 'techStack' && <TechStackGrid />}
+        {value === 'projects' && <Text>Projects content</Text>}
+        {value === 'workExp' && <Text>Work experience content</Text>}
+        {value === 'education' && <Education />}
+        {value === 'certificates' && <Certificates />}
       </Container>
     </Box>
   );
