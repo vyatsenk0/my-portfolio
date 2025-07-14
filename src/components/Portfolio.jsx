@@ -1,5 +1,6 @@
 import { Box, Container, Text, Title, Tabs, Card, Group, SimpleGrid } from '@mantine/core';
 import { TechStackGrid } from './partials/TechStackGrid';
+import { Education } from './partials/Education';
 import { Certificates } from './partials/Certificates';
 
 export default function Portfolio() {
@@ -32,7 +33,7 @@ export default function Portfolio() {
             Work experience content
           </Tabs.Panel>
           <Tabs.Panel value="education" pt="md">
-            Education content
+            <Education />
           </Tabs.Panel>
           <Tabs.Panel value="certs" pt="md">
             <Certificates />
