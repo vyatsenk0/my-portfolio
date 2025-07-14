@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { SimpleGrid, Box, Text, ActionIcon } from '@mantine/core';
-import { IconX } from '@tabler/icons-react';
+import { IconX, IconArrowsMaximize } from '@tabler/icons-react';
 import classes from './Certificates.module.css';
 
 const certificates = [
@@ -29,6 +29,7 @@ export function Certificates() {
               className={classes.certificateImage}
             />
             <div className={classes.overlay}>
+              <IconArrowsMaximize color="white"/>
               <Text className={classes.viewText}>View Certificate</Text>
             </div>
           </Box>

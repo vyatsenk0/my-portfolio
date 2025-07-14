@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Box, Text, ActionIcon, Container } from '@mantine/core';
-import { IconX } from '@tabler/icons-react';
+import { IconX, IconArrowsMaximize } from '@tabler/icons-react';
 import classes from './Certificates.module.css';
 
 const diploma = {
@@ -23,6 +23,7 @@ export function Education() {
             className={classes.certificateImage}
           />
           <div className={classes.overlay}>
+            <IconArrowsMaximize color="white"/>
             <Text className={classes.viewText}>View Diploma</Text>
           </div>
         </Box>
