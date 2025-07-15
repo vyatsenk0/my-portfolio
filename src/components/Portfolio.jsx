@@ -30,7 +30,7 @@ export default function Portfolio() {
           classNames={classes}
           transitionDuration={200}  // smooth transition
           transitionTimingFunction="linear" // smooth transition
-          // withItemsBorders={false} // without | separatators
+          // withItemsBorders={false} // without | separatators, ".control::before" css achieves the same result
           // fullWidth 
           data={[
         {
