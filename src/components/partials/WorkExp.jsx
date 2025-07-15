@@ -9,14 +9,14 @@ export function WorkExp() {
         <Container size="md" ta="center" mt="xl" style={{ display: 'flex', justifyContent: 'center' }}>
             <Timeline active={1} lineWidth={5} bulletSize={27} color="rgba(91, 67, 214, 1)" >
                 <Timeline.Item title="I&IT Technology Analyst/Developer" lineVariant="dashed">
-                    <Text>Ministry of Public and Business Service Delivery and Procurement, Toronto, ON</Text>
+                    <Text>@MPBSDP (Ministry of Public and Business Service Delivery and Procurement), Toronto, ON</Text>
                     <Text>January 2024 - July 2025 (1 year, 6 months)</Text>
     
                     {/* Bullet points */}
                     <List
                         spacing="xs"
                         size="sm"
-                        mt="xs"
+                        mt="lg"
                         icon={
                         <ThemeIcon size={10} radius="xl" color="rgba(91, 67, 214, 1)">
                             <IconCircle size={6} />
