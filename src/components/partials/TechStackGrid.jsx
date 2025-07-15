@@ -52,7 +52,7 @@ export function TechStackGrid() {
       {techCategories.map((category) => (
         <Card key={category.title} withBorder radius="md" className={classes.card} mt="xl">
           <Group justify="center">
-            <Text className={classes.title} fw={700} >{category.title}</Text>
+            <Text className={classes.title} fw={700} size="lg" >{category.title}</Text>
           </Group>
 
           <SimpleGrid cols={{ base: 2, sm: 3, md: 4, lg: 6 }} mt="md" spacing="lg">
