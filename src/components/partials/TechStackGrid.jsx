@@ -12,9 +12,10 @@ const techCategories = [
       { title: 'JavaScript', image: '/stack/javascript.svg' },
       { title: 'TypeScript', image: '/stack/typescript.svg' },
       { title: 'React', image: '/stack/react.svg' },
+      { title: 'Angular', image: '/stack/angular.svg' },
       { title: 'Redux', image: '/stack/redux.svg' },
       { title: 'NextJS', image: '/stack/nextjs.png' },
-      { title: 'Angular', image: '/stack/angular.svg' },
+      { title: 'Electron', image: '/stack/electron.png' },
     ],
   },
   {
@@ -22,6 +23,8 @@ const techCategories = [
     items: [
       { title: 'Node', image: '/stack/nodejs.svg' },
       { title: 'Java', image: '/stack/java.svg' },
+      { title: 'Spring Boot', image: '/stack/springBoot.png' },
+      { title: 'Express.js', image: '/stack/expressJS.svg' },
       { title: 'Python', image: '/stack/python.svg' },
       { title: 'C#', image: '/stack/csharp.svg' },
       { title: '.NET', image: '/stack/dotnet.svg' },
