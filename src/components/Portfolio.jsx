@@ -32,7 +32,7 @@ export default function Portfolio() {
           transitionDuration={200}  // smooth transition
           transitionTimingFunction="linear" // smooth transition
           // withItemsBorders={false} // without | separatators, ".control::before" css achieves the same result
-          // fullWidth 
+          fullWidth 
           data={[
         {
           value: 'techStack',

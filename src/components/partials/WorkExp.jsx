@@ -6,8 +6,8 @@ import { IconCircle } from '@tabler/icons-react';
 
 export function WorkExp() {
     return (
-        <Container size="md" ta="center" mt="xl" style={{ display: 'flex', justifyContent: 'center' }}>
-            <Timeline active={1} lineWidth={5} bulletSize={27} color="rgba(91, 67, 214, 1)" >
+        <Container size="md" ta="center" mt="3em" style={{ display: 'flex', justifyContent: 'center' }}>
+            <Timeline active={1} lineWidth={5} bulletSize={27} ml="lg" color="rgba(91, 67, 214, 1)">
                 <Timeline.Item title="I&IT Technology Analyst/Developer" lineVariant="dashed">
                     <Text>@MPBSDP (Ministry of Public and Business Service Delivery and Procurement), Toronto, ON</Text>
                     <Text>January 2024 - July 2025 (1 year, 6 months)</Text>
