@@ -5,7 +5,8 @@
 }
 
 .indicator {
-    background-image: linear-gradient(to right, #2172f4, #5b43d6, #9333ea);
+  background-image: linear-gradient(to right, #2172f4, #5b43d6, #9333ea);
+  opacity: 0.8;
 }
 
 .control {
