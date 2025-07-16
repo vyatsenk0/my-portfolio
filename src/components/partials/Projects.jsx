@@ -26,7 +26,7 @@ export function Projects() {
     ));
 
     return (
-        <Card radius="md" withBorder padding="xl" mt="xl">
+        <Card radius="md" withBorder padding="xl" mt="xl" className={classes.card}>
             <Card.Section>
                 <Carousel
                 slideSize="80%"
@@ -52,11 +52,17 @@ export function Projects() {
             </Group>
 
             <Text fz="sm" c="dimmed" mt="sm">
-                Description
+                Cross-platform AI-powered budget assistant built with Electron and React. Includes smart financial insights, goal tracking, real-time charts, and a local AI chatbot — all stored securely with SQLite.
             </Text>
 
             <Group justify="space-between" mt="md">
-                <Button onClick={toggle} radius="md">Learn More</Button>
+                <Button onClick={toggle} radius="md"
+                        style={{background: 'linear-gradient(to right, #2172f4, #5b43d6, #9333ea)',
+                        color: 'white',
+                        opacity: 0.8
+                }}>
+                    Learn More
+                </Button>
             </Group>
 
             <Collapse in={opened} transitionDuration={1000} transitionTimingFunction="linear">
