@@ -54,7 +54,7 @@ export function Certificates() {
             size="xl"
             radius="xl"
             color="#5c5b5b"
-            style={{
+            style={{  // required to be inline for a proper icon
               position: 'fixed',
               top: 80,
               right: 380,

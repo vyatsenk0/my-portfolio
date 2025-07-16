@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Box, Container, Text, Title, Tabs, Card, Group, SimpleGrid, Center, SegmentedControl } from '@mantine/core';
+import { Box, Container, Text, Title, Center, SegmentedControl } from '@mantine/core';
 import { IconPackages, IconCode, IconBriefcase2, IconSchool, IconCertificate } from '@tabler/icons-react';
 
 import classes from './Portfolio.module.css';

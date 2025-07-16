@@ -1,4 +1,4 @@
-import { ThemeIcon, Text, Avatar, Timeline, Container, List } from '@mantine/core';
+import { ThemeIcon, Text, Timeline, Container, List } from '@mantine/core';
 
 import { IconCircle } from '@tabler/icons-react';
 
