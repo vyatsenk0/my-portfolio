@@ -51,7 +51,7 @@ export function Projects() {
                 </Text>
             </Group>
 
-            <Text fz="sm" c="dimmed" mt="sm" ta="left">
+            <Text fz="md" c="dimmed" mt="sm" ta="left">
                 Cross-platform AI-powered budget assistant built with Electron and React. Includes smart financial insights, goal tracking, real-time charts, and a local AI chatbot — all stored securely with SQLite.
             </Text>
 
