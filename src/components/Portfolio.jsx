@@ -17,10 +17,14 @@ export default function Portfolio() {
   return (
     <Box id="portfolio" style={{ padding: '80px 0' }}>
       <Container size="md" ta="center">
-        <Title order={2} mb="sm">
+        <Title fz="50" order={1} mb="sm" style={{
+              background: 'linear-gradient(to right, #2172f4, #5b43d6, #9333ea)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+             }}>
           Portfolio Showcase
         </Title>
-        <Text c="dimmed" mb="lg">
+        <Text fz="lg"c="dimmed" mb="lg">
           A quick glance at my technical background and professional journey.
         </Text>
 
