@@ -5,6 +5,7 @@ import { IconPackages, IconCode, IconBriefcase2, IconSchool, IconCertificate } f
 import classes from './Portfolio.module.css';
 
 import { TechStackGrid } from './partials/TechStackGrid';
+import { Projects } from './partials/Projects';
 import { WorkExp } from './partials/WorkExp';
 import { Education } from './partials/Education';
 import { Certificates } from './partials/Certificates';
@@ -83,7 +84,7 @@ export default function Portfolio() {
         />
         {/* Conditionally render partials */}
         {value === 'techStack' && <TechStackGrid />}
-        {value === 'projects' && <Text>Projects content</Text>}
+        {value === 'projects' && <Projects />}
         {value === 'workExp' && <WorkExp/>}
         {value === 'education' && <Education />}
         {value === 'certificates' && <Certificates />}
