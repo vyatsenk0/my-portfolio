@@ -8,6 +8,8 @@ import Portfolio from './components/Portfolio'
 // All packages except `@mantine/hooks` require styles imports
 // @mantine/core package styles must always be imported before any other Mantine package styles:
 import '@mantine/core/styles.css';
+// ‼️ import carousel styles after core package styles
+import '@mantine/carousel/styles.css';
 
 import { MantineProvider } from '@mantine/core';
 
