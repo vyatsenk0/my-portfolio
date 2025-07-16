@@ -16,6 +16,7 @@ const techCategories = [
       { title: 'Redux', image: '/stack/redux.svg' },
       { title: 'NextJS', image: '/stack/nextjs.png' },
       { title: 'Electron', image: '/stack/electron.png' },
+      { title: 'Mantine', image: '/stack/mantine.jpg' },
     ],
   },
   {
