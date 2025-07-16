@@ -1,6 +1,6 @@
-import { IconStarFilled } from '@tabler/icons-react';
+import { IconCircleArrowDown, IconCircleArrowUp  } from '@tabler/icons-react';
 import { Carousel } from '@mantine/carousel';
-import { Button, Card, Group, Image, Text, Collapse } from '@mantine/core';
+import { Button, Card, Group, Image, Text, Collapse, Center  } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import classes from './Projects.module.css';
 
@@ -55,15 +55,16 @@ export function Projects() {
                 Cross-platform AI-powered budget assistant built with Electron and React. Includes smart financial insights, goal tracking, real-time charts, and a local AI chatbot — all stored securely with SQLite.
             </Text>
 
-            <Group justify="space-between" mt="md">
+            <Center  justify="space-between" mt="lg">
                 <Button onClick={toggle} radius="md"
                         style={{background: 'linear-gradient(to right, #2172f4, #5b43d6, #9333ea)',
                         color: 'white',
-                        opacity: 0.8
+                        opacity: 0.8,
                 }}>
                     Learn More
+                    {opened ? <IconCircleArrowUp style={{marginLeft: "10"}}/> : <IconCircleArrowDown style={{marginLeft: "10"}}/>}
                 </Button>
-            </Group>
+            </Center >
 
             <Collapse in={opened} transitionDuration={1000} transitionTimingFunction="linear">
                 <Text mt="xl" ta="left">
