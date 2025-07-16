@@ -4,7 +4,7 @@ import { IconX, IconArrowsMaximize } from '@tabler/icons-react';
 import classes from './Certificates.module.css';
 
 const diploma = {
-  title: 'Bachelor of Computer Science',
+  title: 'Advanced Diploma of Computer Programming and Analysis',
   image: '/diploma/diploma.jpg',
 };
 
