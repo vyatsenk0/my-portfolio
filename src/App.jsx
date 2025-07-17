@@ -3,6 +3,7 @@ import './App.css'
 import Header from './components/Header'
 import Home from './components/Home'
 import Portfolio from './components/Portfolio'
+import Footer from './components/Footer'
 
 // Import styles of packages that you've installed.
 // All packages except `@mantine/hooks` require styles imports
@@ -19,6 +20,7 @@ function App() {
       <Header />
       <Home />
       <Portfolio />
+      <Footer />
     </>
   }</MantineProvider>;
 }
