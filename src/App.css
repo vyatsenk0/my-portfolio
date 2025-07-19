@@ -7,6 +7,22 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* remove scrollbar */
+html, #root > div {
+  scrollbar-width: none;         /* Firefox */
+  -ms-overflow-style: none;      /* Legacy IE/Edge */
+}
+
+/* remove scrollbar */
+html::-webkit-scrollbar,
+#root > div::-webkit-scrollbar {
+  display: none;    /* Chrome/Safari */
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -43,6 +59,3 @@
   color: #888;
 }
 
-html {
-  scroll-behavior: smooth;
-}
