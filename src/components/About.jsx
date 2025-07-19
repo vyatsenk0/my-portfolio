@@ -74,49 +74,51 @@ export default function About() {
       <Grid gutter="xl">
         {stats.map((stat, index) => (
           <Grid.Col span={{ base: 12, sm: 6, md: 4 }} key={index}>
-            <Card
-                shadow="md"
-                padding="lg"
-                radius="md"
-                withBorder
-                style={{
-                    backgroundColor: "rgba(100, 100, 255, 0.1)",
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "space-between",
-                    height: "150px",
-                }}
-                >
-                {/* Top row: Icon + number */}
-                <Box style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-                    <Box>{stat.icon}</Box>
-                    <Text fw={700} size="xl" fz="30">
-                        {stat.value}
-                    </Text>
-                </Box>
-
-                {/* Bottom: Title + Description (left) + Arrow (right) */}
-                <Box
-                    mt="auto"
+            <a href="#portfolio" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <Card
+                    shadow="md"
+                    padding="lg"
+                    radius="md"
+                    withBorder
                     style={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'flex-end',
-                    marginTop: '1rem',
+                        backgroundColor: "rgba(100, 100, 255, 0.1)",
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyContent: "space-between",
+                        height: "150px",
                     }}
-                >
-                    <Box>
-                        <Text fw={600} ta="left">
-                            {stat.title}
-                        </Text>
-                        <Text size="sm" c="dimmed" ta="left">
-                            {stat.description}
+                    >
+                    {/* Top row: Icon + number */}
+                    <Box style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+                        <Box>{stat.icon}</Box>
+                        <Text fw={700} size="xl" fz="30">
+                            {stat.value}
                         </Text>
                     </Box>
 
-                    <IconArrowUpRight size={18} />
-                </Box>
-            </Card>
+                    {/* Bottom: Title + Description (left) + Arrow (right) */}
+                    <Box
+                        mt="auto"
+                        style={{
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'flex-end',
+                        marginTop: '1rem',
+                        }}
+                    >
+                        <Box>
+                            <Text fw={600} ta="left">
+                                {stat.title}
+                            </Text>
+                            <Text size="sm" c="dimmed" ta="left">
+                                {stat.description}
+                            </Text>
+                        </Box>
+
+                        <IconArrowUpRight size={18} />
+                    </Box>
+                </Card>
+            </a>
           </Grid.Col>
         ))}
       </Grid>
