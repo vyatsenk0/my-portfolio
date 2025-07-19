@@ -62,10 +62,10 @@ export default function About() {
       </Text>
 
       <Button
-        style={{background: 'linear-gradient(to right, #2172f4, #5b43d6, #9333ea)', opacity: "0.8"}}
+        style={{background: 'transparent', color: '#9333ea', border: '1px solid #9333ea', fontSize: '18px'}}
         component="a"
         href="#portfolio"
-        leftSection={<IconCode size={20} />}
+        leftSection={<IconCode size={25} />}
         mb="xl"
       >
         View Projects
