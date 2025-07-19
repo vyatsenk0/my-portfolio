@@ -16,7 +16,7 @@
   background: transparent !important;
   color: #9333ea !important;
   border: 1px solid #9333ea !important;
-  font-size: 18px;
+  font-size: 15px !important;
   transition: transform 150ms ease, box-shadow 150ms ease;
 }
 
@@ -33,7 +33,7 @@
 }
 
 .card {
-  background-color: rgba(100, 100, 255, 0.1);
+  background-color: rgba(100, 100, 255, 0.1) !important;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
