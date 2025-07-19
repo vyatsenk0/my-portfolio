@@ -10,7 +10,7 @@ export default function Footer() {
             <Grid.Col span={3} offset={1}>
                 <Button
                     onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                    style={{
+                    style={{  // required to be inline
                         marginTop: '43px',
                         padding: '6px 12px',
                         borderRadius: '6px',
