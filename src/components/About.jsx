@@ -1,44 +1,27 @@
 import { Box, Container, Text, Title, Button, Card, Grid } from '@mantine/core';
-import { IconCode, IconFileCv, IconCertificate, IconArrowUpRight  } from '@tabler/icons-react';
+import { IconCode, IconFileCv, IconCertificate, IconArrowUpRight } from '@tabler/icons-react';
+import classes from './About.module.css';
 
 export default function About() {
   const stats = [
     {
-      icon: <IconCode size={35} style={{
-      padding: 8,
-      display: 'inline-block',      
-      boxSizing: 'content-box',  
-      backgroundColor: 'rgba(170, 170, 170, 0.2)', 
-      borderRadius: '100%',
-    }}/> ,
+      icon: <IconCode size={35} className={classes.icon} />,
       title: 'TOTAL PROJECTS',
       description: 'Modern web and digital solutions',
-      value: 1
+      value: 1,
     },
     {
-      icon: <IconFileCv size={35} style={{
-      padding: 8,
-      display: 'inline-block',      
-      boxSizing: 'content-box',  
-      backgroundColor: 'rgba(170, 170, 170, 0.2)', 
-      borderRadius: '100%',
-    }}/>,
+      icon: <IconFileCv size={35} className={classes.icon} />,
       title: 'YEARS OF EXPERIENCE',
       description: 'Commitment to continuous growth',
-      value: 4
+      value: 4,
     },
     {
-      icon: <IconCertificate size={35} style={{
-      padding: 8,
-      display: 'inline-block',      
-      boxSizing: 'content-box',  
-      backgroundColor: 'rgba(170, 170, 170, 0.2)', 
-      borderRadius: '100%',
-    }}/>,
+      icon: <IconCertificate size={35} className={classes.icon} />,
       title: 'CERTIFICATES',
       description: 'Recognized qualifications',
-      value: 3
-    }
+      value: 3,
+    },
   ];
 
   return (
@@ -47,11 +30,7 @@ export default function About() {
         fz={50}
         order={1}
         mb="sm"
-        style={{
-          background: 'linear-gradient(to right, #2172f4, #5b43d6, #9333ea)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent'
-        }}
+        className={classes.gradientTitle}
       >
         About me
       </Title>
@@ -62,11 +41,11 @@ export default function About() {
       </Text>
 
       <Button
-        style={{background: 'transparent', color: '#9333ea', border: '1px solid #9333ea', fontSize: '18px'}}
         component="a"
         href="#portfolio"
         leftSection={<IconCode size={25} />}
         mb="xl"
+        className={classes.viewProjectsButton}
       >
         View Projects
       </Button>
@@ -74,50 +53,28 @@ export default function About() {
       <Grid gutter="xl">
         {stats.map((stat, index) => (
           <Grid.Col span={{ base: 12, sm: 6, md: 4 }} key={index}>
-            <a href="#portfolio" style={{ textDecoration: 'none', color: 'inherit' }}>
-                <Card
-                    shadow="md"
-                    padding="lg"
-                    radius="md"
-                    withBorder
-                    style={{
-                        backgroundColor: "rgba(100, 100, 255, 0.1)",
-                        display: "flex",
-                        flexDirection: "column",
-                        justifyContent: "space-between",
-                        height: "150px",
-                    }}
-                    >
-                    {/* Top row: Icon + number */}
-                    <Box style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-                        <Box>{stat.icon}</Box>
-                        <Text fw={700} size="xl" fz="30">
-                            {stat.value}
-                        </Text>
-                    </Box>
+            <a href="#portfolio" className={classes.cardLink}>
+              <Card shadow="md" padding="lg" radius="md" withBorder className={classes.card}>
+                <Box className={classes.cardTopRow}>
+                  <Box>{stat.icon}</Box>
+                  <Text fw={700} size="xl" fz="30">
+                    {stat.value}
+                  </Text>
+                </Box>
 
-                    {/* Bottom: Title + Description (left) + Arrow (right) */}
-                    <Box
-                        mt="auto"
-                        style={{
-                        display: 'flex',
-                        justifyContent: 'space-between',
-                        alignItems: 'flex-end',
-                        marginTop: '1rem',
-                        }}
-                    >
-                        <Box>
-                            <Text fw={600} ta="left">
-                                {stat.title}
-                            </Text>
-                            <Text size="sm" c="dimmed" ta="left">
-                                {stat.description}
-                            </Text>
-                        </Box>
+                <Box mt="auto" className={classes.cardBottomRow}>
+                  <Box>
+                    <Text fw={600} ta="left">
+                      {stat.title}
+                    </Text>
+                    <Text size="sm" c="dimmed" ta="left">
+                      {stat.description}
+                    </Text>
+                  </Box>
 
-                        <IconArrowUpRight size={18} />
-                    </Box>
-                </Card>
+                  <IconArrowUpRight size={18} />
+                </Box>
+              </Card>
             </a>
           </Grid.Col>
         ))}
