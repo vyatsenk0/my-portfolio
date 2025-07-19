@@ -36,4 +36,5 @@
   font-family: Outfit, var(--mantine-font-family);
   font-size: 1rem;
   text-align: center;
+  text-shadow: 0 4px 12px rgba(147, 51, 234, 0.8); /* subtle purple glow */
 }
