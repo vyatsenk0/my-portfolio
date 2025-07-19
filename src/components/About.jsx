@@ -4,19 +4,37 @@ import { IconCode, IconFileCv, IconCertificate, IconArrowUpRight  } from '@table
 export default function About() {
   const stats = [
     {
-      icon: <IconCode size={35} />,
+      icon: <IconCode size={35} style={{
+      padding: 8,
+      display: 'inline-block',      
+      boxSizing: 'content-box',  
+      backgroundColor: 'rgba(170, 170, 170, 0.2)', 
+      borderRadius: '100%',
+    }}/> ,
       title: 'TOTAL PROJECTS',
       description: 'Modern web and digital solutions',
       value: 1
     },
     {
-      icon: <IconFileCv size={35} style={{border: "10px solid red !important"}}/>,
+      icon: <IconFileCv size={35} style={{
+      padding: 8,
+      display: 'inline-block',      
+      boxSizing: 'content-box',  
+      backgroundColor: 'rgba(170, 170, 170, 0.2)', 
+      borderRadius: '100%',
+    }}/>,
       title: 'YEARS OF EXPERIENCE',
       description: 'Commitment to continuous growth',
       value: 4
     },
     {
-      icon: <IconCertificate size={35} />,
+      icon: <IconCertificate size={35} style={{
+      padding: 8,
+      display: 'inline-block',      
+      boxSizing: 'content-box',  
+      backgroundColor: 'rgba(170, 170, 170, 0.2)', 
+      borderRadius: '100%',
+    }}/>,
       title: 'CERTIFICATES',
       description: 'Recognized qualifications',
       value: 3
