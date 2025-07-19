@@ -16,15 +16,15 @@ import '@mantine/carousel/styles.css';
 import { MantineProvider } from '@mantine/core';
 
 function App() {
-  return <MantineProvider>{
-    <>
+  return (
+    <MantineProvider>
       <Header />
       <Home />
       <About />
       <Portfolio />
       <Footer />
-    </>
-  }</MantineProvider>;
+    </MantineProvider>
+  )
 }
 
 export default App
