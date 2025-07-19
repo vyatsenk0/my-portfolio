@@ -38,7 +38,7 @@ export default function About() {
         About me
       </Title>
 
-      <Text size="lg" mb="md">
+      <Text size="lg" mb="md" maw={600} mx="auto">
         Hello, I'm Vladislav Yatsenko, Full Stack Developer with 4 years of work experience in the industry committed to crafting intuitive experiences
         through clean code, purposeful design, and impactful tools.
       </Text>
