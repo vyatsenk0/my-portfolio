@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: rgba(100, 100, 255, 0.2);
+  background-color: rgba(100, 100, 255, 0.2); /* light plum color */
   transition:
     box-shadow 150ms ease,
     transform 150ms ease;
