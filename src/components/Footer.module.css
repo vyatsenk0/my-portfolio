@@ -27,3 +27,19 @@
         margin-top: var(--mantine-spacing-xs);
     }
 }
+
+.socialIcons {
+    transition: transform 150ms ease, box-shadow 150ms ease;
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+/* Light theme */
+[data-mantine-color-scheme="light"] .socialIcons {
+  color: var(--mantine-color-black);
+  &:hover {
+    color: var(--mantine-color-black);
+    background-color: gray;
+  }
+}

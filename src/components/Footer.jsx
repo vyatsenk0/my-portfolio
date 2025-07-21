@@ -51,13 +51,13 @@ export default function Footer() {
         <Text size="md">
           © 2025 - All Rights Reserved.
         </Text>
-        <Group gap={0} className={classes.social} justify="flex-end" wrap="nowrap">
+        <Group gap={0} className={classes.social} justify="flex-end" wrap="nowrap" mt="4">
           <ActionIcon component="a" href="https://www.linkedin.com/in/vladislav-yatsenko/" target="_blank"
-                        rel="noopener noreferrer" size="lg" color="gray" variant="subtle">
+                        rel="noopener noreferrer" size="lg" variant="subtle" color="gray"  className={classes.socialIcons}>
             <IconBrandLinkedin  size={30} stroke={1.5} />
           </ActionIcon>
           <ActionIcon component="a" href="https://github.com/vyatsenk0" target="_blank"
-                        rel="noopener noreferrer" size="xl" color="gray" variant="subtle">
+                        rel="noopener noreferrer" size="lg" variant="subtle" color="gray" className={classes.socialIcons}>
             <IconBrandGithub  size={30} stroke={1.5} />
           </ActionIcon>
         </Group>
