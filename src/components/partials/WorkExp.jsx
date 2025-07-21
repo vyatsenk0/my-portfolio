@@ -2,11 +2,11 @@ import { ThemeIcon, Text, Timeline, Container, List } from '@mantine/core';
 
 import { IconCircle } from '@tabler/icons-react';
 
-//import classes from './WorkExp.module.css';
+import classes from './WorkExp.module.css';
 
 export function WorkExp() {
     return (
-        <Container size="md" ta="center" mt="3em" style={{ display: 'flex', justifyContent: 'center' }}>
+        <Container size="md" ta="center" mt="3em"  className={classes.container}>
             <Timeline active={1} lineWidth={5} bulletSize={27} ml="lg" color="rgba(91, 67, 214, 1)">
                 <Timeline.Item title="I&IT Technology Analyst/Developer" lineVariant="dashed">
                     <Text>@MPBSDP (Ministry of Public and Business Service Delivery and Procurement), Toronto, ON</Text>
