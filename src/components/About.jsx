@@ -67,7 +67,7 @@ export default function About() {
                     <Text fw={600} ta="left">
                       {stat.title}
                     </Text>
-                    <Text size="sm" c="dimmed" ta="left">
+                    <Text size="sm" ta="left">
                       {stat.description}
                     </Text>
                   </Box>

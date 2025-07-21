@@ -32,23 +32,23 @@ export default function Footer() {
             {/* Working Time */}
             <Grid.Col span={4}>
               <Text fw={600} mb={20}>Working Time</Text>
-              <Text size="md" c="dimmed">Almaty, Kazakhstan</Text>
-              <Text size="md" c="dimmed">Monday - Friday</Text>
-              <Text size="md" c="dimmed">09:00 AM – 06:00 PM (UTC +5)</Text>
+              <Text size="md">Almaty, Kazakhstan</Text>
+              <Text size="md">Monday - Friday</Text>
+              <Text size="md">09:00 AM – 06:00 PM (UTC +5)</Text>
             </Grid.Col>
             
             {/* RIGHT COLUMN */}
             {/* Contact Info */}
             <Grid.Col span={4}>
               <Text fw={600} mb={20}>Contact Info</Text>
-              <Text size="md" c="dimmed">+1 (437) 421-1371</Text>
-              <Text size="md" c="dimmed">yatsenkovladislav50@gmail.com</Text>
+              <Text size="md">+1 (437) 421-1371</Text>
+              <Text size="md">yatsenkovladislav50@gmail.com</Text>
             </Grid.Col>
         </Grid>
       
       {/* AFTER FOOTER */}
       <Container fluid className={classes.afterFooter}>
-        <Text c="dimmed" size="md">
+        <Text size="md">
           © 2025 - All Rights Reserved.
         </Text>
         <Group gap={0} className={classes.social} justify="flex-end" wrap="nowrap">
