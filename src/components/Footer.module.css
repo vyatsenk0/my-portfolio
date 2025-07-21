@@ -33,6 +33,29 @@
     border-top: 1px solid var(--mantine-color-gray-6);
 }
 
+.backToTopBtn {
+    margin-top: 43px;
+    background: transparent !important;
+    border: 1px solid white !important;
+    opacity: 0.8;
+
+    transition: transform 150ms ease, box-shadow 150ms ease;
+    &:hover {
+        transform: scale(1.1);
+        background-color: rgba(100, 100, 255, 0.25) !important;
+    }
+}
+
+/* Light theme */
+[data-mantine-color-scheme="light"] .backToTopBtn {
+    color: var(--mantine-color-black);
+    border: 2px solid var(--mantine-color-black) !important;
+    &:hover {
+        color: var(--mantine-color-black);
+    }
+}
+
+
 
 .social {
     @media (max-width: $mantine-breakpoint-sm) {

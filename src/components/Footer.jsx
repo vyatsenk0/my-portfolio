@@ -10,18 +10,8 @@ export default function Footer() {
             <Grid.Col span={3} offset={1}>
                 <Button
                     onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                    style={{  // required to be inline
-                        marginTop: '43px',
-                        padding: '6px 12px',
-                        borderRadius: '6px',
-                        background: 'transparent',
-                        color: 'white',
-                        border: '1px solid white',
-                        cursor: 'pointer',
-                        fontWeight: 500,
-                        width: 'fit-content',
-                        opacity: 0.8
-                    }}
+                    className={classes.backToTopBtn}
+                     radius="md" 
                 >
                     <IconChevronsUp  style={{ marginRight: '10px' }} />
                     BACK TO TOP

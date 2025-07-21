@@ -34,30 +34,21 @@
 .learnMoreBtn {
   background: transparent !important;
   opacity: 0.8;
-
-   transition: transform 150ms ease, box-shadow 150ms ease;
-    &:hover {
-        transform: scale(1.1);
-    }
-}
-
-
-/* Dark theme */
-[data-mantine-color-scheme="dark"] .learnMoreBtn {
   color: var(--mantine-color-white);
-  border: 1px solid var(--mantine-color-white);
+  border: 1px solid var(--mantine-color-white) !important;
+  
+  transition: transform 150ms ease, box-shadow 150ms ease;
   &:hover {
-     color: var(--mantine-color-white);
-     background-color: rgba(100, 100, 255, 0.25) !important;
+    transform: scale(1.1);
+    background-color: rgba(100, 100, 255, 0.25) !important;
   }
 }
 
 /* Light theme */
 [data-mantine-color-scheme="light"] .learnMoreBtn {
   color: var(--mantine-color-black);
-  border: 1px solid var(--mantine-color-black);
+  border: 2px solid var(--mantine-color-black) !important;
   &:hover {
     color: var(--mantine-color-black);
-    background-color: rgba(100, 100, 255, 0.25) !important;
   }
 }
