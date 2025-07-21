@@ -37,23 +37,17 @@
   font-weight: 500;
   text-decoration: none;
   transition: color 0.2s ease;
+  color: var(--mantine-color-gray-4);
+
+  &:hover {
+    color: var(--mantine-color-white);
+  }
 }
 
-/* Dark theme: gray-4 */
-[data-mantine-color-scheme="dark"] .links a {
-  color: var(--mantine-color-gray-4);
-}
 
 /* Light theme: gray-7 */
 [data-mantine-color-scheme="light"] .links a {
-  color: var(--mantine-color-gray-7);
-}
-
-/* === Hover Styles === */
-
-/* Dark theme: white text */
-[data-mantine-color-scheme="dark"] .links a:hover {
-  color: var(--mantine-color-white);
+  color: var(--mantine-color-gray-9);
 }
 
 /* Light theme: black text */
