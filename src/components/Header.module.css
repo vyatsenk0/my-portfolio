@@ -5,8 +5,7 @@
   height: 56px;
   top: 0; 
   margin-bottom: 120px;
-  background-color: rgba(var(--mantine-color-body-rgb), 0,5) !important;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
 }
 
 .inner {
