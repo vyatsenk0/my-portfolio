@@ -51,16 +51,12 @@ export function Projects() {
                 </Text>
             </Group>
 
-            <Text fz="md" c="dimmed" mt="sm" ta="left">
+            <Text fz="md" mt="sm" ta="left">
                 Cross-platform AI-powered budget assistant built with Electron and React. Includes smart financial insights, goal tracking, real-time charts, and a local AI chatbot — all stored securely with SQLite.
             </Text>
 
             <Center  justify="space-between" mt="lg">
-                <Button onClick={toggle} radius="md"
-                        style={{background: 'linear-gradient(to right, #2172f4, #5b43d6, #9333ea)',
-                        color: 'white',
-                        opacity: 0.8,
-                }}>
+                <Button onClick={toggle} radius="md" className={classes.learnMoreBtn}>
                     Learn More
                     {opened ? <IconCircleArrowUp style={{marginLeft: "10"}}/> : <IconCircleArrowDown style={{marginLeft: "10"}}/>}
                 </Button>
