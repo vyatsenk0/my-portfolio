@@ -7,6 +7,9 @@
 .indicator {
   background-image: linear-gradient(to right, #2172f4, #5b43d6, #9333ea);
   opacity: 0.8;
+  transition: box-shadow 150ms ease !important;
+  box-shadow: 0 0 20px 4px rgba(100, 100, 255, 0.25),
+              0 0 20px 4px rgba(147, 51, 234, 0.25) !important; /* subtle base outline */
 }
 
 .control {
