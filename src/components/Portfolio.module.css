@@ -21,6 +21,7 @@
 .label {    
   &:hover {
     background-color: rgba(100, 100, 255, 0.25) !important;
+    text-shadow: 0 4px 12px rgba(147, 51, 234, 0.8); /* subtle purple glow */
   }
   &,
   &:hover {
