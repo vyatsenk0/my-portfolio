@@ -46,7 +46,7 @@ export function Projects() {
             </Card.Section>
 
             <Group justify="space-between" mt="lg">
-                <Text fw={500} fz="lg">
+                <Text fw={500} fz="lg" style={{  textShadow: '0 4px 12px rgba(147, 51, 234, 0.8)'}}>
                 AI-Powered Budget Assistant
                 </Text>
             </Group>
