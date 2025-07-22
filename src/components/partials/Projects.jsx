@@ -60,7 +60,7 @@ export function Projects() {
                 functionality and aesthetic clarity for managing your personal finances.
             </Text>
 
-            <Center  justify="space-between" mt="xl">
+            <Center  justify="space-between" mt="xl" mb="lg">
                 <Button onClick={toggle} radius="md" mr="10" className={classes.learnMoreBtn}>
                     Learn More
                     {opened ? <IconCircleArrowUp style={{marginLeft: "10"}}/> : <IconCircleArrowDown style={{marginLeft: "10"}}/>}
