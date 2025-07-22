@@ -62,7 +62,7 @@ export function TechStackGrid() {
           <SimpleGrid cols={{ base: 2, sm: 3, md: 4, lg: 6 }} mt="md" spacing="lg">
             {category.items.map((item) => (
               <UnstyledButton key={item.title} className={classes.item}>
-                <Image src={item.image} alt={item.title} height={40} fit="contain" />
+                <Image src={item.image} alt={item.title} height={50} fit="contain" />
                 <Text size="x" mt={7} ta="center" fw={600}>
                   {item.title}
                 </Text>
