@@ -30,7 +30,6 @@
 
 .learnMoreBtn {
   background: transparent !important;
-  opacity: 0.8;
   color: var(--mantine-color-white);
   border: 1px solid var(--mantine-color-white) !important;
   
