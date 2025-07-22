@@ -45,13 +45,13 @@ export function Projects() {
                 </Carousel>
             </Card.Section>
 
-            <Group justify="space-between" mt="lg">
+            <Group justify="space-between" mt="xl">
                 <Text fw={500} fz="lg" style={{  textShadow: '0 4px 12px rgba(147, 51, 234, 0.8)'}}>
                 MoneyMap (AI-Powered Budget Assistant)
                 </Text>
             </Group>
 
-            <Text fz="md" mt="sm" ta="left">
+            <Text fz="md" mt="lg" ta="left">
                 <strong>MoneyMap</strong> is a cross-platform, AI-powered budget assistant built with Electron and React,
                 offering a native desktop experience with seamless integration of cloud-based AI via the OpenAI API.
                 It combines smart financial tracking, real-time chart visualizations, personal goal management,
@@ -60,7 +60,7 @@ export function Projects() {
                 functionality and aesthetic clarity for managing your personal finances.
             </Text>
 
-            <Center  justify="space-between" mt="lg">
+            <Center  justify="space-between" mt="xl">
                 <Button onClick={toggle} radius="md" className={classes.learnMoreBtn}>
                     Learn More
                     {opened ? <IconCircleArrowUp style={{marginLeft: "10"}}/> : <IconCircleArrowDown style={{marginLeft: "10"}}/>}
@@ -91,6 +91,32 @@ export function Projects() {
                     <strong>AI Chat Assistant:</strong> Ask questions about your finances, uncover trends, receive suggestions, and store conversations privately.
                     </li>
                 </ul>
+
+                <Text mt="xl" fw={500}>🛠 Tech Stack:</Text>
+                <ul style={{ paddingLeft: 20, textAlign: 'left' }}>
+                    <li>
+                        <strong>Electron:</strong> Native desktop app framework (Windows/macOS/Linux)
+                    </li>
+                    <li>
+                        <strong>React:</strong> Frontend library for dynamic user interfaces
+                    </li>
+                    <li>
+                        <strong>Mantine:</strong> UI component library for clean, responsive design
+                    </li>
+                    <li>
+                        <strong>@mantine/charts:</strong> Built-in chart components (PieChart, BarChart, LineChart) for real-time financial visualization
+                    </li>
+                    <li>
+                        <strong>SQLite3:</strong> Lightweight embedded database for fast, secure local storage
+                    </li>
+                    <li>
+                        <strong>Sequelize:</strong> ORM for managing local SQLite database interactions
+                    </li>
+                    <li>
+                        <strong>OpenAI API:</strong> Cloud-based AI assistant for smart financial insights and conversational interaction
+                    </li>
+                </ul>
+
             </Collapse>
         </Card>
     );
