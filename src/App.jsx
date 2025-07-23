@@ -20,11 +20,13 @@ function App() {
   return (
     <MantineProvider>
       <CanvasBackground />
-      <Header />
-      <Home />
-      <About />
-      <Portfolio />
-      <Footer />
+      <div style={{ position: 'relative', zIndex: 0 }}>
+        <Header />
+        <Home />
+        <About />
+        <Portfolio />
+        <Footer />
+      </div>
     </MantineProvider>
   )
 }
