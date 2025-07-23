@@ -11,9 +11,9 @@ export default function Footer() {
                 <Button
                     onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                     className={classes.backToTopBtn}
-                     radius="md" 
+                     radius="md" leftSection={<IconChevronsUp/>}
                 >
-                    <IconChevronsUp  style={{ marginRight: '10px' }} />
+                    
                     BACK TO TOP
               </Button>
             </Grid.Col>

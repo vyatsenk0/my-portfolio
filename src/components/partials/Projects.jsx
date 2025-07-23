@@ -61,14 +61,14 @@ export function Projects() {
             </Text>
 
             <Center  justify="space-between" mt="xl" mb="lg">
-                <Button onClick={toggle} radius="md" mr="10" className={classes.learnMoreBtn}>
+                <Button onClick={toggle} radius="md" mr="10" className={classes.learnMoreBtn}
+                        rightSection={opened ? <IconCircleArrowUp/> : <IconCircleArrowDown/>}>
                     Learn More
-                    {opened ? <IconCircleArrowUp style={{marginLeft: "10"}}/> : <IconCircleArrowDown style={{marginLeft: "10"}}/>}
                 </Button>
                  <Button radius="md" className={classes.githubBtn} ml="5" component="a" 
-                        href="https://github.com/vyatsenk0/MoneyMap" target="_blank" rel="noopener noreferrer">
+                        href="https://github.com/vyatsenk0/MoneyMap" target="_blank" rel="noopener noreferrer"
+                        rightSection={<IconBrandGithub/>}>
                     GitHub
-                    <IconBrandGithub style={{marginLeft: "10"}}/>
                 </Button>
             </Center >
 
