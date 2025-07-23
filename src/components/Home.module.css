@@ -50,3 +50,26 @@
   background: transparent !important;
   color: #5b43d6 !important;
 }
+
+
+.social {
+    @media (max-width: $mantine-breakpoint-sm) {
+        margin-top: var(--mantine-spacing-xs);
+    }
+}
+
+.socialIcons {
+    transition: transform 150ms ease, box-shadow 150ms ease;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+/* Light theme */
+[data-mantine-color-scheme="light"] .socialIcons {
+  color: var(--mantine-color-gray-8 );
+  &:hover {
+    color: var(--mantine-color-black);
+    background-color: gray;
+  }
+}

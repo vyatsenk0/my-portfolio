@@ -10,10 +10,10 @@ export default function Home() {
           {/* --- LEFT SIDE --- */}
 
           {/* TITLE */}
-          <Title ta="left">
+          <Title fz="70" ta="left">
             <span className={classes.highlight}>Full Stack</span> 
           </Title>
-          <Title className={classes.title} ta="left" ml="10">
+          <Title fz="70" className={classes.title} ta="left" ml="10">
             Developer
           </Title>
 
