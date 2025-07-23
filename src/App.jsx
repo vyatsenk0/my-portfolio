@@ -1,5 +1,6 @@
 import './App.css'
 
+import CanvasBackground from './components/CanvasBackground'
 import Header from './components/Header'
 import Home from './components/Home'
 import About from './components/About'
@@ -18,6 +19,7 @@ import { MantineProvider } from '@mantine/core';
 function App() {
   return (
     <MantineProvider>
+      <CanvasBackground />
       <Header />
       <Home />
       <About />
