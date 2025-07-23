@@ -27,11 +27,11 @@ export default function Home() {
 
           {/* LINKS */}
           <Group mt={30}>
-            <Button radius="xl" size="md" className={classes.icon} rightSection={<IconExternalLink />}
+            <Button radius="xl" size="md" className={classes.links} rightSection={<IconExternalLink />}
                     component="a" href="#portfolio">
               Portfolio
             </Button>
-            <Button variant="default" radius="xl" size="md" className={classes.icon} rightSection={<IconMail />}
+            <Button variant="default" radius="xl" size="md" className={classes.links} rightSection={<IconMail />}
                     component="a" href="#contact">
               Contact
             </Button>
