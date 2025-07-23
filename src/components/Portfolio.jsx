@@ -24,7 +24,7 @@ export default function Portfolio() {
              }}>
           Portfolio Showcase
         </Title>
-        <Text fz="lg" mb="lg">
+        <Text fz="lg" mb="lg" c="dimmed">
           A quick glance at my technical background and professional journey.
         </Text>
 
