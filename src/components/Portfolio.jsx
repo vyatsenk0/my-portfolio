@@ -52,7 +52,7 @@ export default function Portfolio() {
           value: 'projects',
           label: (
             <Center style={{ gap: 10 }}>
-              <IconCode size={20} />
+              <IconCode size={25} />
               <span>Projects</span>
             </Center>
           ),
@@ -70,7 +70,7 @@ export default function Portfolio() {
           value: 'education',
           label: (
             <Center style={{ gap: 10 }}>
-              <IconSchool size={20} />
+              <IconSchool size={25} />
               <span>Education</span>
             </Center>
           ),
@@ -79,7 +79,7 @@ export default function Portfolio() {
           value: 'certificates',
           label: (
             <Center style={{ gap: 10 }}>
-              <IconCertificate size={20} />
+              <IconCertificate size={25} />
               <span>Certificates</span>
             </Center>
           ),
