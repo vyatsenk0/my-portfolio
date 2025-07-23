@@ -1,3 +1,4 @@
+import { Typewriter } from 'react-simple-typewriter';
 import { IconMail, IconExternalLink, IconBrandLinkedin, IconBrandGithub  } from '@tabler/icons-react';
 import { Button, Container, Group, Text, Title, ActionIcon } from '@mantine/core';
 import classes from './Home.module.css';
@@ -17,9 +18,21 @@ export default function Home() {
             Developer
           </Title>
 
-          {/* DYNAMIC TEXT & DESCRIPTION */}
-          <Text mt="md" ta="left">
-            Dynamic text
+          {/* DYNAMIC Typewriter TEXT & DESCRIPTION */}
+          <Text mt="md" ta="left" fw={500} fz="xl">
+            <Typewriter
+              words={[
+                'Computer Programming & Analysis Graduate',
+                'Code Enthusiast',
+                'Tech-Driven Creator',
+              ]}
+              loop={0} // 0 = infinite
+              cursor
+              cursorStyle="|"
+              typeSpeed={70}
+              deleteSpeed={40}
+              delaySpeed={1500}
+            />
           </Text>
           <Text c="dimmed" mt="md" ta="left">
             Crafting seamless, scalable digital experiences through clean code, thoughtful design, and meaningful technology.
