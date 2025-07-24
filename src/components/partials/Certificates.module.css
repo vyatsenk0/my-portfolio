@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: rgba(100, 100, 255, 0.2); /* light plum color */
+  background-color: light-dark(var(--mantine-color-dark-0), var(--mantine-color-dark-5)) !important;
   transition:
     box-shadow 150ms ease,
     transform 150ms ease;

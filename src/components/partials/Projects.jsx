@@ -33,7 +33,7 @@ export function Projects() {
                 controlSize={45}
                 withControls
                 withIndicators
-                slideGap="lg"
+                slideGap="xs"
                 emblaOptions={{ loop: true, align: 'center' }}
                 classNames={{
                     root: classes.carousel,
