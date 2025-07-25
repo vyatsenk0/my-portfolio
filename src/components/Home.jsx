@@ -2,6 +2,7 @@ import { Typewriter } from 'react-simple-typewriter';
 import { IconMail, IconExternalLink, IconBrandLinkedin, IconBrandGithub  } from '@tabler/icons-react';
 import { Button, Container, Group, Text, Title, ActionIcon } from '@mantine/core';
 import classes from './Home.module.css';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 export default function Home() {
   return (
@@ -64,8 +65,14 @@ export default function Home() {
 
           {/* --- RIGHT SIDE --- */}
 
-          {/* CANVAS */}
-          
+          {/* LOTTIE ANIMATION */}
+          <DotLottieReact
+            src="/animation/main.lottie"
+            loop
+            autoplay
+            style={{ width: 600, height: 600 }}
+          />
+                  
         </div>
       </div>
     </Container>
