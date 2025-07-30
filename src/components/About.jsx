@@ -25,7 +25,7 @@ export default function About() {
   ];
 
   return (
-    <Container size="lg" py="xl" id="about" style={{ padding: '100px 0' }}>
+    <Container size="lg" py="xl" id="about" style={{ paddingTop: '150px', paddingBottom: '150px' }}>
       <Title
         fz={50}
         order={1}
