@@ -35,7 +35,7 @@ export default function Home() {
               delaySpeed={1500}
             />
           </Text>
-          <Text c="dimmed" mt="md" ta="left">
+          <Text mt="md" ta="left">
             Crafting seamless, scalable digital experiences through clean code, thoughtful design, and meaningful technology.
           </Text>
 
@@ -62,18 +62,20 @@ export default function Home() {
               <IconBrandGithub  size={30} stroke={1.5} />
             </ActionIcon>
           </Group>
+          </div>
 
           {/* --- RIGHT SIDE --- */}
 
           {/* LOTTIE ANIMATION */}
-          <DotLottieReact
-            src="/animation/main.lottie"
-            loop
-            autoplay
-            style={{ width: 600, height: 600 }}
-          />
-                  
-        </div>
+          <div className={classes.animation}>
+            <DotLottieReact
+              src="/animation/main.lottie"
+              loop
+              autoplay
+              style={{ width: 600, height: 600 }}
+            />
+          </div>      
+        
       </div>
     </Container>
   );

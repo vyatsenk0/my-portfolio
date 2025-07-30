@@ -1,6 +1,8 @@
 .inner {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
   padding-top: calc(var(--mantine-spacing-xl) * 4);
   padding-bottom: calc(var(--mantine-spacing-xl) * 4);
 }
@@ -30,7 +32,7 @@
 .highlight {
   position: relative;
   background-color: rgba(100, 100, 255, 0.25) !important;
-  border-radius: var(--mantine-radius-sm);
+  border-radius: var(--mantine-radius-md);
   padding: 4px 12px;
 }
 
@@ -71,5 +73,19 @@
   &:hover {
     color: var(--mantine-color-black);
     background-color: gray;
+  }
+}
+
+
+.animation {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    margin-top: 2rem;
+    justify-content: center;
+    width: 100%;
   }
 }
