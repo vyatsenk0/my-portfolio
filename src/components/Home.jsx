@@ -52,14 +52,14 @@ export default function Home() {
           </Group>
 
           {/* SOCIAL ICONS */}
-          <Group gap={0} className={classes.social} wrap="nowrap" mt="4">
+          <Group gap={15} className={classes.social} wrap="nowrap" mt="15" ml="10">
             <ActionIcon component="a" href="https://www.linkedin.com/in/vladislav-yatsenko/" target="_blank"
-                          rel="noopener noreferrer" size="lg" variant="subtle" color="gray"  className={classes.socialIcons}>
-              <IconBrandLinkedin  size={30} stroke={1.5} />
+                          rel="noopener noreferrer" size="xl" variant="subtle" color="gray"  className={classes.socialIcons}>
+              <IconBrandLinkedin  size={40} stroke={1.5} />
             </ActionIcon>
             <ActionIcon component="a" href="https://github.com/vyatsenk0" target="_blank"
-                          rel="noopener noreferrer" size="lg" variant="subtle" color="gray" className={classes.socialIcons}>
-              <IconBrandGithub  size={30} stroke={1.5} />
+                          rel="noopener noreferrer" size="xl" variant="subtle" color="gray" className={classes.socialIcons}>
+              <IconBrandGithub  size={40} stroke={1.5} />
             </ActionIcon>
           </Group>
           </div>
