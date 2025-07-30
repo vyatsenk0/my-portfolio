@@ -29,3 +29,12 @@
     }
   }
 }
+
+
+/* Light theme */
+[data-mantine-color-scheme="light"] .label {
+  color: var(--mantine-color-gray-9);
+  &[data-active] {
+    color: var(--mantine-color-white);
+  }
+}
