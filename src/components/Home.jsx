@@ -3,8 +3,31 @@ import { IconMail, IconExternalLink, IconBrandLinkedin, IconBrandGithub  } from 
 import { Button, Container, Group, Text, Title, ActionIcon } from '@mantine/core';
 import classes from './Home.module.css';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import { useEffect, useState } from 'react';
 
 export default function Home() {
+
+  const [animationSrc, setAnimationSrc] = useState('/animation/lightTheme.lottie');
+
+  useEffect(() => {
+    const scheme = document.documentElement.getAttribute('data-mantine-color-scheme');
+    setAnimationSrc(scheme === 'dark' ? '/animation/darkTheme.lottie' : '/animation/lightTheme.lottie');
+
+    const observer = new MutationObserver(() => {
+      const updatedScheme = document.documentElement.getAttribute('data-mantine-color-scheme');
+      setAnimationSrc(updatedScheme === 'dark' ? '/animation/darkTheme.lottie' : '/animation/lightTheme.lottie');
+    });
+
+    // Observe changes to the data attribute if theme changes dynamically
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['data-mantine-color-scheme'],
+    });
+
+    return () => observer.disconnect();
+  }, []);
+  
+
   return (
     <Container size="md" mt="xl">
       <div className={classes.inner}>
@@ -69,7 +92,7 @@ export default function Home() {
           {/* LOTTIE ANIMATION */}
           <div className={classes.animation}>
             <DotLottieReact
-              src="/animation/main.lottie"
+              src={animationSrc}
               loop
               autoplay
               style={{ width: 600, height: 600 }}
