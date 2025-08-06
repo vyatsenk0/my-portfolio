@@ -6,16 +6,22 @@
 .container {
   flex: 1;
   padding: var(--mantine-spacing-xl);
-  border: 20px solid rgba(100, 100, 255, 0.1) !important;
+  border: 35px solid rgba(0, 0, 0, 0.1) !important;
   border-radius: 15px;
   background-color: light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-6));
-  width: 700px;
+  width: 600px;
   
 
   @media (max-width: $mantine-breakpoint-sm) {
     padding: var(--mantine-spacing-md);
     padding-left: var(--mantine-spacing-md);
   }
+}
+
+.input {
+    width: 500px;
+    /* border: 2px solid light-dark(var(--mantine-color-dark-1), var(--mantine-color-dark-4)) !important;
+    border-radius: 20px; */
 }
 
 

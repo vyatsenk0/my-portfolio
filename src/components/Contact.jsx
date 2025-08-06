@@ -1,6 +1,7 @@
-import { Button, Group, SimpleGrid, Textarea, TextInput, Title, Container, Box } from '@mantine/core';
+import { Button, Group, SimpleGrid, Textarea, TextInput, Title, Container, Box, Stack  } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { IconSend } from '@tabler/icons-react';
+
 
 import classes from './Contact.module.css';
 
@@ -35,12 +36,7 @@ export default function Contact() {
         <form className={classes.form} onSubmit={form.onSubmit(() => {})}>
         
 
-          <Title fz="40" order={1} mb="sm" ta="left" style={{
-            background: 'linear-gradient(to right, #2172f4, #5b43d6, #9333ea)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-
-            }}>
+          <Title fz="40" order={1} mb="sm" ta="left" style={{ color: "#5b43d6"}}>
             Get in touch
           </Title>
 
@@ -48,7 +44,7 @@ export default function Contact() {
             Drop me a message and let’s start the conversation.
           </Title>
 
-          <SimpleGrid cols={{ base: 1, sm: 2 }} mt="xl">
+          <Stack gap="md" mt="xl">
             <TextInput
               placeholder="Your name"
               name="name"
@@ -63,21 +59,19 @@ export default function Contact() {
               className={classes.input}
               {...form.getInputProps('email')}
             />
-          </SimpleGrid>
+            <Textarea
+              placeholder="Your message"
+              maxRows={10}
+              minRows={5}
+              autosize
+              name="message"
+              variant="filled"
+              className={classes.input}
+              {...form.getInputProps('message')}
+            />
+          </Stack>
 
-          <Textarea
-            mt="md"
-            placeholder="Your message"
-            maxRows={10}
-            minRows={5}
-            autosize
-            name="message"
-            variant="filled"
-            className={classes.input}
-            {...form.getInputProps('message')}
-          />
-          
-
+      
           <Group justify="center" mt="xl">
             <Button type="submit" size="md" color="#5b43d6" leftSection={<IconSend/>}>
               Send message
