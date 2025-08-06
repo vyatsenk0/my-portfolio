@@ -15,7 +15,7 @@ export default function Home() {
           <Title fz="70" ta="left">
             <span className={classes.highlight}>Full Stack</span> 
           </Title>
-          <Title fz="70" className={classes.title} ta="left" ml="10">
+          <Title fz="70" className={classes.title} ta="left" mr="1">
             Developer
           </Title>
 
@@ -52,14 +52,14 @@ export default function Home() {
           </Group>
 
           {/* SOCIAL ICONS */}
-          <Group gap={15} className={classes.social} wrap="nowrap" mt="15" ml="10">
+          <Group gap={15} className={classes.social} wrap="nowrap" mt="20">
             <ActionIcon component="a" href="https://www.linkedin.com/in/vladislav-yatsenko/" target="_blank"
                           rel="noopener noreferrer" size="xl" variant="subtle" color="gray"  className={classes.socialIcons}>
-              <IconBrandLinkedin  size={40} stroke={1.5} />
+              <IconBrandLinkedin  size={40} stroke={1.5} className={classes.icon}/>
             </ActionIcon>
             <ActionIcon component="a" href="https://github.com/vyatsenk0" target="_blank"
                           rel="noopener noreferrer" size="xl" variant="subtle" color="gray" className={classes.socialIcons}>
-              <IconBrandGithub  size={40} stroke={1.5} />
+              <IconBrandGithub  size={40} stroke={1.5} className={classes.icon}/>
             </ActionIcon>
           </Group>
           </div>

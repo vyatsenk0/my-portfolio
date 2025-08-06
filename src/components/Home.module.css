@@ -60,10 +60,17 @@
 }
 
 .socialIcons {
+    filter: drop-shadow(0 0 3px rgba(147, 51, 234, 0.4))
+          drop-shadow(0 0 6px rgba(100, 100, 255, 0.25));
     transition: transform 150ms ease, box-shadow 150ms ease;
     &:hover {
-        transform: scale(1.1);
+        transform: scale(1.2);
     }
+}
+
+.icon {
+  filter: drop-shadow(0 0 3px rgba(147, 51, 234, 0.4))
+          drop-shadow(0 0 6px rgba(100, 100, 255, 0.25));
 }
 
 /* Light theme */
