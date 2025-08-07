@@ -38,3 +38,8 @@
     color: var(--mantine-color-white);
   }
 }
+
+
+.indicator {
+  transition: transform 200ms linear, width 200ms linear !important;
+}

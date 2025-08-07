@@ -1,6 +1,7 @@
 import { Button, Group, SimpleGrid, Textarea, TextInput, Title, Container, Box, Stack  } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { IconSend } from '@tabler/icons-react';
+import { IconShare } from '@tabler/icons-react';
 
 
 import classes from './Contact.module.css';
@@ -28,7 +29,7 @@ export default function Contact() {
             }}>
         Contact Me
       </Title>
-      <Title fz="15" fw="200" style={{paddingBottom: '40px'}}>
+      <Title fz="15" fw="200" style={{paddingBottom: '70px'}}>
         Got something to ask? Reach out and I’ll get back to you in no time.
       </Title>
       <Container className={classes.container}>
@@ -37,7 +38,7 @@ export default function Contact() {
         
 
           <Title fz="40" order={1} mb="sm" ta="left" style={{ color: "#5b43d6"}}>
-            Get in touch
+            Get in touch <IconShare size="40" style={{ marginLeft: "220px", marginBottom: "-5px"}}/>
           </Title>
 
           <Title ta="left" fz="15" fw="200">
@@ -79,9 +80,9 @@ export default function Contact() {
           </Group>
         </form>
 
-      <hr/>
+      <hr className={classes.hr}/>
 
-      <Group className={classes.connect}>
+      <Group className={classes.connect} mt="xl" ml="xl">
         <Title size="h4">
           Connect with me
         </Title>
