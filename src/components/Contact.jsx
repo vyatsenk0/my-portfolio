@@ -1,4 +1,4 @@
-import { Button, Group, SimpleGrid, Textarea, TextInput, Title, Container, Box, Stack  } from '@mantine/core';
+import { Button, Group, SimpleGrid, Textarea, TextInput, Title, Container, Box, Stack } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { IconSend, IconShare, IconBrandLinkedin, IconBrandGithub } from '@tabler/icons-react';
 
@@ -19,6 +19,7 @@ export default function Contact() {
 
   return (
     <Container className={classes.wrapper} id="contact">
+      {/* TITLES */}
       <Title fz="50" order={1} mb="sm" style={{
             background: 'linear-gradient(to right, #2172f4, #5b43d6, #9333ea)',
             WebkitBackgroundClip: 'text',
@@ -30,11 +31,11 @@ export default function Contact() {
       <Title fz="15" fw="200" style={{paddingBottom: '70px'}}>
         Got something to ask? Reach out and I’ll get back to you in no time.
       </Title>
+
       <Container className={classes.container}>
-      
+        {/* FORM */}
         <form className={classes.form} onSubmit={form.onSubmit(() => {})}>
         
-
           <Title fz="40" order={1} mb="sm" ta="left" style={{ color: "#5b43d6"}}>
             Get in touch <IconShare size="40" style={{ marginLeft: "220px", marginBottom: "-5px"}}/>
           </Title>
@@ -70,7 +71,6 @@ export default function Contact() {
             />
           </Stack>
 
-      
           <Group justify="center" mt="xl">
             <Button type="submit" size="md" color="#5b43d6" leftSection={<IconSend/>}>
               Send message
@@ -80,7 +80,7 @@ export default function Contact() {
 
       <hr className={classes.hr}/>
 
-       {/* CONNECT */}
+      {/* CONNECT */}
       <Group className={classes.connect} mt="xl" ml="xl">
 
         <Title size="h4" mb="sm" ml="md">
@@ -88,7 +88,9 @@ export default function Contact() {
         </Title>
 
         {/* LinkedIn box */}
-        <Box className={`${classes.socialBox} ${classes.linkedinBox}`}>
+        <Box className={`${classes.socialBox} ${classes.linkedinBox}`}
+              component="a" href="https://www.linkedin.com/in/vladislav-yatsenko/"
+              target="_blank" rel="noopener noreferrer">
           <IconBrandLinkedin size={40} />
           <Stack spacing={0} ml="md">
             <Title size="h4" fw={500}>
@@ -101,7 +103,9 @@ export default function Contact() {
         </Box>
 
         {/* GitHub box */}
-        <Box className={classes.socialBox}>
+        <Box className={classes.socialBox}
+              component="a" href="https://www.linkedin.com/in/vladislav-yatsenko/"
+              target="_blank" rel="noopener noreferrer">
           <IconBrandGithub size={40} />
           <Stack spacing={0} ml="md">
             <Title size="h4" fw={500} mr="xl">
