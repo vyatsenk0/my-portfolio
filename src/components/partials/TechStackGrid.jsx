@@ -63,7 +63,7 @@ export function TechStackGrid() {
             {category.items.map((item) => (
               <UnstyledButton key={item.title} className={classes.item}>
                 <Image src={item.image} alt={item.title} height={50} fit="contain" />
-                <Text size="x" mt={7} ta="center" fw={600}>
+                <Text size="x" ta="center" fw={600}>
                   {item.title}
                 </Text>
               </UnstyledButton>
