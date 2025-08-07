@@ -7,7 +7,7 @@
   border-radius: var(--mantine-radius-md);
   height: 90px;
   background-color: light-dark(rgba(100, 100, 255, 0.1), rgba(0, 0, 0, 0.1)) !important;
-  border: light-dark(2px solid rgba(100, 100, 255, 0.4), 2px solid rgba(100, 100, 255, 0.3)) !important;
+  border: light-dark(1px solid rgba(100, 100, 255, 0.4), 1px solid rgba(100, 100, 255, 0.3)) !important;
   border-radius: 15px !important; 
   transition:
     box-shadow 150ms ease,

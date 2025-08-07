@@ -7,11 +7,10 @@
   flex: 1;
   padding: var(--mantine-spacing-xl);
   border: 35px solid rgba(0, 0, 0, 0.1) !important;
-  border-radius: 15px;
-  background-color: light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-6));
+  border-radius: 30px;
   width: 600px;
-  
-
+  background-color: light-dark(var(--mantine-color-gray-4), var(--mantine-color-dark-7));
+    
   @media (max-width: $mantine-breakpoint-sm) {
     padding: var(--mantine-spacing-md);
     padding-left: var(--mantine-spacing-md);
@@ -20,8 +19,6 @@
 
 .input {
     width: 500px;
-    /* border: 2px solid light-dark(var(--mantine-color-dark-1), var(--mantine-color-dark-4)) !important;
-    border-radius: 20px; */
 }
 
 

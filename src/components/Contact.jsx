@@ -28,7 +28,7 @@ export default function Contact() {
             }}>
         Contact Me
       </Title>
-      <Title size="h6" style={{paddingBottom: '40px'}}>
+      <Title fz="15" fw="200" style={{paddingBottom: '40px'}}>
         Got something to ask? Reach out and I’ll get back to you in no time.
       </Title>
       <Container className={classes.container}>
@@ -40,7 +40,7 @@ export default function Contact() {
             Get in touch
           </Title>
 
-          <Title size="h6"  ta="left">
+          <Title ta="left" fz="15" fw="200">
             Drop me a message and let’s start the conversation.
           </Title>
 
