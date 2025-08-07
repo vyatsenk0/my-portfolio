@@ -72,7 +72,8 @@ export default function Contact() {
           </Stack>
 
           <Group justify="center" mt="xl">
-            <Button type="submit" size="md" color="#5b43d6" leftSection={<IconSend/>}>
+            <Button type="submit" size="md" color="#5b43d6"
+                    className={classes.sendMsgBtn} leftSection={<IconSend/>}>
               Send message
             </Button>
           </Group>
