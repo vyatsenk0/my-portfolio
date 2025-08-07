@@ -39,3 +39,13 @@
   border-radius: 15px;
   width: 500px;
 }
+
+.socialBox {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 10px 16px;
+  min-width: 450px;
+}
+

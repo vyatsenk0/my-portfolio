@@ -1,8 +1,6 @@
 import { Button, Group, SimpleGrid, Textarea, TextInput, Title, Container, Box, Stack  } from '@mantine/core';
 import { useForm } from '@mantine/form';
-import { IconSend } from '@tabler/icons-react';
-import { IconShare } from '@tabler/icons-react';
-
+import { IconSend, IconShare, IconBrandLinkedin, IconBrandGithub } from '@tabler/icons-react';
 
 import classes from './Contact.module.css';
 
@@ -82,19 +80,39 @@ export default function Contact() {
 
       <hr className={classes.hr}/>
 
+       {/* CONNECT */}
       <Group className={classes.connect} mt="xl" ml="xl">
-        <Title size="h4">
+
+        <Title size="h4" mb="sm" ml="md">
           Connect with me
         </Title>
 
-        <Box>
-          Let's connect
-          on Linkedin
+        {/* LinkedIn box */}
+        <Box className={`${classes.socialBox} ${classes.linkedinBox}`}>
+          <IconBrandLinkedin size={40} />
+          <Stack spacing={0} ml="md">
+            <Title size="h4" fw={500}>
+              Let’s connect
+            </Title>
+            <Title size="sm" fz="15" c="dimmed" mr="md">
+              on LinkedIn
+            </Title>
+          </Stack>
         </Box>
-        <Box>
-          Github
-          @githubNickname
+
+        {/* GitHub box */}
+        <Box className={classes.socialBox}>
+          <IconBrandGithub size={40} />
+          <Stack spacing={0} ml="md">
+            <Title size="h4" fw={500} mr="xl">
+              GitHub
+            </Title>
+            <Title size="sm" fz="15" c="dimmed">
+              @vyatsenk0
+            </Title>
+          </Stack>
         </Box>
+
       </Group>
 
       </Container>
