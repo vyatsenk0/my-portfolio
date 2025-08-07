@@ -13,7 +13,7 @@ export default function Home() {
           {/* --- LEFT SIDE --- */}
 
           {/* TITLE */}
-          <Title fz="70" ta="left">
+          <Title fz="70" ta="left" className={classes.mainTitle}>
             <span className={classes.highlight}>Full Stack</span> 
           </Title>
           <Title fz="70" className={classes.title} ta="left" mr="1">

@@ -16,6 +16,11 @@
   }
 }
 
+.mainTitle {
+  opacity: 100% !important;
+  color: light-dark(rgb(59, 58, 58), white)
+}
+
 .title {
   background: linear-gradient(to right, #2172f4, #5b43d6, #9333ea);
   -webkit-background-clip: text;
