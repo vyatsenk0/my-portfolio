@@ -105,7 +105,7 @@ export default function Contact() {
 
         {/* GitHub box */}
         <Box className={classes.socialBox}
-              component="a" href="https://www.linkedin.com/in/vladislav-yatsenko/"
+              component="a" href="https://github.com/vyatsenk0"
               target="_blank" rel="noopener noreferrer">
           <IconBrandGithub size={40} />
           <Stack spacing={0} ml="md">
