@@ -18,7 +18,7 @@
 }
 
 .viewProjectsButton {
-  background: transparent !important;
+  background: light-dark(var(--mantine-color-gray-2), transparent) !important;
   color: #5b43d6 !important;
   border: 1px solid #9333ea !important;
   font-size: 15px !important;
@@ -30,7 +30,7 @@
 }
 
 .viewProjectsButton:hover {
-  transform: scale(1.1);
+  transform: scale(1.15);
   background: transparent !important;
   color: #5b43d6 !important;
 }
