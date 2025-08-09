@@ -31,7 +31,7 @@
 .card {
   background-color: light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-6)) !important;
   border: light-dark(2px solid var(--mantine-color-dark-1), 4px solid var(--mantine-color-dark-8)) !important;
-  border-radius: var(--mantine-radius-md);
+  border-radius: var(--mantine-radius-xl) !important;
   box-shadow: 0 0 0 1px rgba(100, 100, 255, 0.2); /* subtle base outline */
   transition: box-shadow 0.3s ease;
 }

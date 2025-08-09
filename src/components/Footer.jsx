@@ -31,7 +31,7 @@ export default function Footer() {
             {/* Contact Info */}
             <Grid.Col span={4}>
               <Text fw={600} mb={20}>Contact Info</Text>
-              <Text size="md">+1 (437) 421-1371</Text>
+              <Text size="md">+7 (707) 206-7342</Text>
               <Text size="md">yatsenkovladislav50@gmail.com</Text>
             </Grid.Col>
         </Grid>
