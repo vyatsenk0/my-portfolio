@@ -56,11 +56,11 @@ export default function Home() {
           <Group gap={15} className={classes.social} wrap="nowrap" mt="20">
             <ActionIcon component="a" href="https://www.linkedin.com/in/vladislav-yatsenko/" target="_blank"
                           rel="noopener noreferrer" size="xl" variant="subtle" color="gray"  className={classes.socialIcons}>
-              <IconBrandLinkedin  size={40} stroke={1.5} className={classes.icon}/>
+              <IconBrandLinkedin  size={35} stroke={1.5} className={classes.icon}/>
             </ActionIcon>
             <ActionIcon component="a" href="https://github.com/vyatsenk0" target="_blank"
                           rel="noopener noreferrer" size="xl" variant="subtle" color="gray" className={classes.socialIcons}>
-              <IconBrandGithub  size={40} stroke={1.5} className={classes.icon}/>
+              <IconBrandGithub  size={33} stroke={1.5} className={classes.icon}/>
             </ActionIcon>
           </Group>
           </div>

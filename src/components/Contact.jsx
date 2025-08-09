@@ -89,12 +89,12 @@ export default function Contact() {
         </Title>
 
         {/* LinkedIn box */}
-        <Box className={`${classes.socialBox} ${classes.linkedinBox}`}
+        <Box className={classes.socialBox}
               component="a" href="https://www.linkedin.com/in/vladislav-yatsenko/"
               target="_blank" rel="noopener noreferrer">
           <IconBrandLinkedin size={40} />
-          <Stack spacing={0} ml="md">
-            <Title size="h4" fw={500}>
+          <Stack spacing={0} ml="md" gap="xs">
+            <Title size="h4" fw={500} style={{ margin: 0, lineHeight: 1, }}>
               Let’s connect
             </Title>
             <Title size="sm" fz="15" c="dimmed" mr="md">
@@ -108,8 +108,8 @@ export default function Contact() {
               component="a" href="https://github.com/vyatsenk0"
               target="_blank" rel="noopener noreferrer">
           <IconBrandGithub size={40} />
-          <Stack spacing={0} ml="md">
-            <Title size="h4" fw={500} mr="xl">
+          <Stack spacing={0} ml="md" gap="xs">
+            <Title size="h4" fw={500} mr="xl" style={{ margin: 0, lineHeight: 1 }}>
               GitHub
             </Title>
             <Title size="sm" fz="15" c="dimmed">
