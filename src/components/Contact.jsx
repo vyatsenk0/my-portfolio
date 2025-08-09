@@ -69,6 +69,8 @@ export default function Contact() {
         <form className={classes.form} action="https://formsubmit.co/7ce2932496eed78495a535b89c83f425"
               method="POST" onSubmit={handleSubmit}
               >
+
+          <input type="hidden" name="_captcha" value="false"></input>
         
           <Title fz="40" order={1} mb="sm" ta="left" style={{ color: "#5b43d6"}}>
             Get in touch <IconShare size="40" style={{ marginLeft: "220px", marginBottom: "-5px"}}/>
