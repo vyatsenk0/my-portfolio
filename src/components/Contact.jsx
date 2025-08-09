@@ -1,10 +1,13 @@
-import { Button, Group, SimpleGrid, Textarea, TextInput, Title, Container, Box, Stack } from '@mantine/core';
+import { useState } from 'react';
+import { Button, Group, SimpleGrid, Textarea, TextInput, Title, Container, Box, Stack, Modal } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { IconSend, IconShare, IconBrandLinkedin, IconBrandGithub } from '@tabler/icons-react';
 
 import classes from './Contact.module.css';
 
 export default function Contact() {
+  const [modalOpened, setModalOpened] = useState(false);
+
   const form = useForm({
     //  mode: 'uncontrolled',
     validateInputOnChange: true,
@@ -20,8 +23,34 @@ export default function Contact() {
     },
   });
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!form.validate().hasErrors) {
+      // Open a submission confirmation modal
+      setModalOpened(true);
+      // Submit form via FormSubmit
+      e.target.submit();
+    }
+  };
+
   return (
     <Container className={classes.wrapper} id="contact">
+
+      {/* Submission confirmation Modal */}
+      <Modal
+        opened={modalOpened}
+        onClose={() => setModalOpened(false)}
+        centered
+        transitionProps={{ transition: 'fade', duration: 600, timingFunction: 'linear' }}
+        withinPortal={false}
+        style= {{marginLeft: "-300px"}}
+      >        
+        <Title size="lg" mb="xl">Your message has been successfully sent! 🎉</Title>
+        <Button variant="outline" onClick={() => setModalOpened(false)}>
+          Close
+        </Button>
+      </Modal>
+
       {/* TITLES */}
       <Title fz="50" order={1} mb="sm" style={{
             background: 'linear-gradient(to right, #2172f4, #5b43d6, #9333ea)',
@@ -37,7 +66,8 @@ export default function Contact() {
 
       <Container className={classes.container}>
         {/* FORM */}
-        <form className={classes.form} action="https://formsubmit.co/7ce2932496eed78495a535b89c83f425" method="POST" 
+        <form className={classes.form} action="https://formsubmit.co/7ce2932496eed78495a535b89c83f425"
+              method="POST" onSubmit={handleSubmit}
               >
         
           <Title fz="40" order={1} mb="sm" ta="left" style={{ color: "#5b43d6"}}>
