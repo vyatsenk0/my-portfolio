@@ -6,14 +6,17 @@ import classes from './Contact.module.css';
 
 export default function Contact() {
   const form = useForm({
+    //  mode: 'uncontrolled',
+    validateInputOnChange: true,
     initialValues: {
       name: '',
       email: '',
       message: '',
     },
     validate: {
-      name: (value) => value.trim().length < 2,
-      email: (value) => !/^\S+@\S+$/.test(value),
+      name: (value) => value.trim().length < 2 ? 'Name must be at least 2 characters' : null,
+      email: (value) => /^\S+@\S+$/.test(value) ? null : 'Invalid email address',
+      message: (value) => value.trim().length === 0 ? 'Message cannot be empty' : null,
     },
   });
 
@@ -34,7 +37,8 @@ export default function Contact() {
 
       <Container className={classes.container}>
         {/* FORM */}
-        <form className={classes.form} onSubmit={form.onSubmit(() => {})}>
+        <form className={classes.form} action="https://formsubmit.co/7ce2932496eed78495a535b89c83f425" method="POST" 
+              >
         
           <Title fz="40" order={1} mb="sm" ta="left" style={{ color: "#5b43d6"}}>
             Get in touch <IconShare size="40" style={{ marginLeft: "220px", marginBottom: "-5px"}}/>
@@ -51,6 +55,9 @@ export default function Contact() {
               variant="filled"
               className={classes.input}
               {...form.getInputProps('name')}
+              styles={{
+                error: { textAlign: 'left' }
+              }}
             />
             <TextInput
               placeholder="Your email"
@@ -58,6 +65,9 @@ export default function Contact() {
               variant="filled"
               className={classes.input}
               {...form.getInputProps('email')}
+              styles={{
+                error: { textAlign: 'left' }
+              }}
             />
             <Textarea
               placeholder="Your message"
@@ -68,6 +78,9 @@ export default function Contact() {
               variant="filled"
               className={classes.input}
               {...form.getInputProps('message')}
+              styles={{
+                error: { textAlign: 'left' }
+              }}
             />
           </Stack>
 
