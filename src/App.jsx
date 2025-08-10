@@ -19,7 +19,7 @@ import { MantineProvider } from '@mantine/core';
 
 function App() {
   return (
-    <MantineProvider>
+    <MantineProvider defaultColorScheme="dark">
       <CanvasBackground />
       <div style={{ position: 'relative', zIndex: 0 }}>
         <Header />
