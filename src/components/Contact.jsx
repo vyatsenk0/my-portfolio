@@ -28,8 +28,11 @@ export default function Contact() {
     if (!form.validate().hasErrors) {
       // Open a submission confirmation modal
       setModalOpened(true);
-      // Submit form via FormSubmit
-      e.target.submit();
+
+      // delay form submission
+      setTimeout(() => {
+        e.target.submit(); // Submit form via FormSubmit
+      }, 2500); // 2.5 seconds
     }
   };
 
@@ -41,7 +44,7 @@ export default function Contact() {
         opened={modalOpened}
         onClose={() => setModalOpened(false)}
         centered
-        transitionProps={{ transition: 'fade', duration: 600, timingFunction: 'linear' }}
+        transitionProps={{ transition: 'fade', duration: 800, timingFunction: 'linear' }}
         withinPortal={false}
         style= {{marginLeft: "-300px"}}
       >        
