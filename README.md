@@ -1,12 +1,29 @@
-# React + Vite
+# Personal portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+# 📖 Overview
+This is a modern portfolio website built with Vite + React and styled using the Mantine UI component library. It features a clean design that showcases my tech stack (hard skills), projects, work experience, education (diploma), certificates and contact information.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The portfolio includes: vector animation, real-time typewriter effects, dynamic canvas background, seamless carousel components and an easy-to-use light/dark theme toggle. Icons is provided by Tabler Icons, ensuring a consistent and visually appealing UI. The contact form uses formsubmit.co service to handle submissions simply and securely without backend setup.
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# 🛠 Tech Stack
+• **Vite + React** – Modern build tool combined with React for efficient and smooth web application development
+
+• **Mantine** – Comprehensive React component library for sleek and responsive UI design
+
+• **formsubmit.co** – Simple form backend service enabling easy email form submissions without server code
+
+• **@lottiefiles** – Lightweight animation library for smooth, scalable vector animations
+
+• **@embla-carousel, @embla-carousel-react** – Flexible, performant carousel components for seamless sliding effects
+
+• **@react-simple-typewriter** – Easy-to-use typing animation effect for engaging text display
+
+• **@tabler/icons-react** – A versatile set of clean, customizable SVG icons designed specifically for React projects
+
+
+# ⚙️ In Development:
+
+• Dynamic animated section transitions
+
