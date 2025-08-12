@@ -7,7 +7,7 @@ import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 export default function Home() {
 
   return (
-    <Container size="md" mt="xl">
+    <Container size="md" mt="xl" id="home">
       <div className={classes.inner}>
         <div className={classes.content}>
           {/* --- LEFT SIDE --- */}

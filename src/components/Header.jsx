@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Burger, Container, Group } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import classes from './Header.module.css';
@@ -9,7 +9,7 @@ import cx from 'clsx';
 
 
 const links = [
-  { link: '#', label: 'Home' },
+  { link: '#home', label: 'Home' },
   { link: '#about', label: 'About' },
   { link: '#portfolio', label: 'Portfolio' },
   { link: '#contact', label: 'Contact' },
@@ -17,11 +17,30 @@ const links = [
 
 export default function Header() {
   const [opened, { toggle }] = useDisclosure(false);
-  const [active, setActive] = useState("#");
+  const [active, setActive] = useState("#home");
   
   const { setColorScheme } = useMantineColorScheme();
   // -> computedColorScheme is 'light' | 'dark', argument is the default value
   const computedColorScheme = useComputedColorScheme('dark', { getInitialValueInEffect: true });
+
+  // Detect section in view while scrolling
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + 80; // offset for fixed header
+
+      for (let i = links.length - 1; i >= 0; i--) {
+        const section = document.querySelector(links[i].link);
+        if (section && section.offsetTop <= scrollPosition) {
+          setActive(links[i].link);
+          break;
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const items = links.map((link) => (
   <a
