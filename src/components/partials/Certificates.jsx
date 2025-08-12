@@ -69,7 +69,7 @@ export function Certificates() {
             style={{  // required to be inline for a proper icon
               position: 'fixed',
               top: 80,
-              right: 380,
+              right: 410,
               color: 'white',
               zIndex: 10000,
             }}
