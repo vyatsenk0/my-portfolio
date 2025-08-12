@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Box, Text, ActionIcon, Container } from '@mantine/core';
 import { IconX, IconArrowsMaximize } from '@tabler/icons-react';
 import classes from './Certificates.module.css';
@@ -11,6 +11,18 @@ const diploma = {
 export function Education() {
   const [active, setActive] = useState(false);
   const handleClose = () => setActive(false);
+
+  // Disable scroll when overlay is active
+  useEffect(() => {
+    if (active) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [active]);
 
   return (
     <>

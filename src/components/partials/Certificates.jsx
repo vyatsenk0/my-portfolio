@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { SimpleGrid, Box, Text, ActionIcon } from '@mantine/core';
 import { IconX, IconArrowsMaximize } from '@tabler/icons-react';
 import classes from './Certificates.module.css';
@@ -12,6 +12,18 @@ const certificates = [
 export function Certificates() {
   const [activeCert, setActiveCert] = useState(null);
   const handleClose = () => setActiveCert(null);
+
+  // Disable scroll when overlay is active
+  useEffect(() => {
+    if (activeCert) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [activeCert]);
 
   return (
     <>
