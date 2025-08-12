@@ -26,7 +26,7 @@ export function Projects() {
     ));
 
     return (
-        <Card radius="md" withBorder padding="xl" mt="xl" className={classes.card}>
+        <Card radius="lg" withBorder padding="xl" mt="xl" className={classes.card}>
             <Card.Section>
                 <Carousel
                 slideSize="80%"
