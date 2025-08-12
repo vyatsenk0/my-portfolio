@@ -1,4 +1,6 @@
 .item {
+  cursor: default !important;
+  outline: none !important;
   display: flex;
   flex-direction: column;
   align-items: center;
