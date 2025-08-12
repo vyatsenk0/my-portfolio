@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Box, Container, Text, Title, Center, SegmentedControl } from '@mantine/core';
 import { IconPackages, IconCode, IconBriefcase2, IconSchool, IconCertificate } from '@tabler/icons-react';
+import { AnimatePresence, motion } from "motion/react"; // new package import
 
 import classes from './Portfolio.module.css';
 
@@ -13,6 +14,14 @@ import { Certificates } from './partials/Certificates';
 
 export default function Portfolio() {
   const [value, setValue] = useState('techStack');
+
+   const tabs = {
+    techStack: <TechStackGrid />,
+    projects: <Projects />,
+    workExp: <WorkExp />,
+    education: <Education />,
+    certificates: <Certificates />,
+  };
 
   return (
     <Box id="portfolio" style={{ padding: '80px 0' }}>
@@ -84,14 +93,24 @@ export default function Portfolio() {
             </Center>
           ),
         },
-      ]}
+        ]}
         />
-        {/* Conditionally render partials */}
-        {value === 'techStack' && <TechStackGrid />}
-        {value === 'projects' && <Projects />}
-        {value === 'workExp' && <WorkExp/>}
-        {value === 'education' && <Education />}
-        {value === 'certificates' && <Certificates />}
+      
+        {/* Conditionally render dynamically animated partials */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={value}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.95 }}
+            transition={{
+              duration: 0.22,
+              ease: "easeOut"
+            }}
+          >
+            {tabs[value]}
+          </motion.div>
+        </AnimatePresence>
       </Container>
     </Box>
   );
